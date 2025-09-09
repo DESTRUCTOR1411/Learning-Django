@@ -5,10 +5,10 @@ def index(request):
     return render(request,'index.html')
 
 def services(request):
-    return HttpResponse("This is our services page")
+   return render(request,'services.html')
 
 def about(request):
-    return HttpResponse("This is our about page")
+    return render(request,'about.html')
 
 def contacts(request):
-    return HttpResponse("This is our contacts page")
+    return render(request,'contacts.html')
