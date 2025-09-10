@@ -1,6 +1,6 @@
  
 from django.shortcuts import render, HttpResponse
-
+from django.contrib import messages
 from home.models import Contact
 
 # Create your views here.
@@ -25,4 +25,5 @@ def contacts(request):
         contact=Contact(First_Name=First_Name,Last_Name=Last_Name, Email=Email,
                         PhoneNumber=PhoneNumber, City=City, Gender=Gender, Goals=Goals)
         contact.save()
+        messages.success(request, "Contact information saved successfully 😁")
     return render(request,'contacts.html')

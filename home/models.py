@@ -16,3 +16,6 @@ class Contact(models.Model):
     Gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     Goals = models.TextField(max_length=125)
     
+    def __str__(self):
+        return self.First_Name
+    
